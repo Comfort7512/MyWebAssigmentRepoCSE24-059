@@ -30,6 +30,66 @@ header{
   color: whitesmoke;
   font-weight: bold;
 }
+/* brand styles */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 2rem;
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+.logo {
+  height: 2.5rem; 
+  width: auto;
+  
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.brand a {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.brand a:hover {
+  color: #ffcc00;
+}
+
+.brand h5 {
+  color: #ffcc00;
+  font-size: 0.9rem;
+  font-weight: normal;
+  margin-top: 0.2rem;
+  letter-spacing: 1.5px;
+  font-style: italic;
+}
+
+/* For mobile view */
+@media (max-width: 768px) {
+  .brand {
+    gap: 0.3rem;
+    font-size: 1.5rem;
+  }
+  
+  .logo {
+    height: 2rem;
+  }
+}
+
 
 .navbar .navLinks{
   display: flex;
@@ -123,6 +183,7 @@ header{
 /* The hero section */
 .hero{
   min-height: 70vh;
+  background-color: #333;
   background-image: url(HomeImages/dark-surface-with-blank-space-fast-food-menu.resized.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -165,7 +226,6 @@ header{
  .top-selling, h1, p{
   text-align: center;
   padding: 1rem;
-  
  }
   .customer-fav{
     display: flex;
@@ -174,6 +234,10 @@ header{
     margin: 0 auto;
     gap: 50px;
   }
+  .customer-fav h2{
+    font-size: 1.2rem;
+  }
+
   .fav{
     background-color: white;
   box-shadow: 0 4px 8px rgba(0,0,0,0.5);
@@ -185,7 +249,7 @@ header{
   .fav:hover{
     transform: translateY(-5px);
    }
-  .fav{
+  .fav {
     width: 100%;
   }
   .addToOrder{
@@ -266,12 +330,12 @@ header{
 }
 .story h1{
   color: red;
-  margin-bottom: 1rem;
+  
   font-size: 2rem;
 }
 .story p{
-  line-height: 1.4;
-  margin-bottom: 2rem;
+  line-height: 2;
+  margin-bottom: 1rem;
 }
 .story button{
   padding: 1rem 2rem;
@@ -304,8 +368,10 @@ header{
   }
 }
 
+/* Footer Section */
+
 .footer{
-  background-color: rgb(255, 46, 46);
+  background-color: #da000d;;
   width: 100%;
   padding: 2rem 0;
 }
@@ -359,8 +425,18 @@ header{
   gap: 1rem;
 }
 
+
+.conditions a{
+color: white;
+opacity: 0.7;
+text-decoration: none;
+}
+.conditions a:hover{
+  color: blue
+}
+
 /* MENU PAGE MENU PAGE MENU PAGE */
-/* Add to your existing CSS */
+
 .drinks {
   width: 100%;
   max-width: 1200px;
@@ -414,3 +490,4 @@ header{
     width: 100%;
   }
 }
+

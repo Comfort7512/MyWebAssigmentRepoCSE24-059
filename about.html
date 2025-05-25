@@ -3,9 +3,356 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="ChilliBite Fast Food Restaurant">
+  <meta name="description" content="Restaurant selling fast food in Botswana, Gaborone">
   <title>Document</title>
+  <script src="javascript.js"></script>
+  <link rel="icon" href="HomeImages/chilli-pepper.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .about-section {
+      background-color: #f8f8f8;
+      padding: 3rem 2rem;
+      margin: 0;
+    }
+  
+    .our-story {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+      line-height: 2;
+    }
+  
+    .story-title {
+      color: #da000d;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    .story-content{
+      color: #555;
+      font-size: 1.1rem;
+    }
+  
+    .story-subtitle {
+      color: #333;
+      font-size: 1.5rem;
+      margin-bottom: rem;
+      font-weight: normal;
+      letter-spacing: 1px;
+    }
+  
+    
+  
+    @media (max-width: 768px) {
+      .story-content {
+        columns: 1;
+      }
+      
+      .story-title {
+        font-size: 2.5rem;
+      }
+      
+      .story-subtitle {
+        font-size: 1.3rem;
+      }
+    }
+
+    .founder {
+      background-color:#f8f8f8 ;
+      padding: 4rem 2rem;
+      /* margin: 3rem 0; */
+      border-top: 2px solid #da000d;
+      border-bottom: 2px solid #da000d;
+    }
+  
+    .founder-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  
+    .contained {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+    }
+  
+    .founder-image {
+      flex: 1;
+    }
+  
+    .founder-image img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 50%;
+      object-fit: cover;
+      aspect-ratio: 1/1;
+     /*  border: 5px solid #da000d; */
+    /*   box-shadow: 0 4px 15px rgba(0,0,0,0.1); */
+    }
+  
+    .founder-details {
+      flex: 2;
+    }
+  
+    .founder-details h2 {
+      color: #da000d;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      text-align: center;
+    }
+  
+    .founder-details p {
+      color: #555;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+  
+    .founder-quote {
+      font-style: italic;
+      font-weight: bold;
+      color: #333;
+      border-left: 3px solid #da000d;
+      padding-left: 1.5rem;
+    }
+  
+    @media (max-width: 768px) {
+      .contained {
+        flex-direction: column;
+        gap: 2rem;
+      }
+      
+      .founder-image img {
+        max-width: 250px;
+      }
+      
+      .founder-details h2 {
+        font-size: 2rem;
+        text-align: center;
+      }
+    }
+    .core-values-section {
+    background-color: white;
+    padding: 4rem 2rem;
+    margin: 0 auto;
+  }
+  
+  .values-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .values-heading {
+    color: #da000d;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    position: relative;
+  }
+  
+  .values-heading::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: #da000d;
+    margin: 15px auto;
+  }
+  
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .value-card {
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid #da000d;
+  }
+  
+  .value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+  
+  .value-icon {
+    font-size: 2.5rem;
+    color: #da000d;
+    margin-bottom: 1.5rem;
+  }
+  
+  .value-card h3 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .value-card p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 1.1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .values-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .values-heading {
+      font-size: 2rem;
+    }
+  }
+  </style>
 </head>
 <body>
+  <header>
+    <header>
+      <nav class="navbar">
+        <div class="brand">
+          <img src="HomeImages/chilli-pepper.png" alt="ChilliBite Logo" class="logo">
+          <a href="index.html">ChilliBite</a>
+          <h5>Quality meets convenience.</h5>
+        </div>
+        <ul class="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="payment.html">Payment</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+         <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div> 
+      </nav>
+    </header>
+  <section class="about-section">
+    <div class="our-story">
+      <h1 class="story-title">Our Story</h1>
+      <h2 class="story-subtitle">HOW IT ALL BEGAN</h2>
+      <div class="story-content">
+       
+        <p>
+          From Humble Stall to Botswana's Favorite
+
+What started as a small food stall is now Botswana's go-to for bold, fast flavors. Our secret? Henry's fiery chilli sauce—a family treasure—paired with quick, craveable meals.
+
+By 2018, demand exploded, leading to our first full restaurant. Today, with three Gaborone spots and Francistown growing, we stay true to our roots: homemade taste at unbeatable value.
+
+Every burger, crispy chicken piece, and ice-cold drink carries our passion—and Botswana's rich culinary spirit. We're not just a restaurant; we're flavor custodians, serving heritage in every bite.
+
+</p>
+
+
+      </div>
+    </div>
+  </section>
   
+ 
+  <section class="founder">
+    <div class="founder-container">
+      <div class="contained">
+        <div class="founder-image">
+          <img src="WhatsApp Image 2025-05-24 at 15.04.21_1be2e4f8.jpg" alt="Henry Mothobi, Founder of ChilliBite">
+        </div>
+        <div class="founder-details">
+          <h2>The Founder</h2>
+          <p>
+
+            Henry Mothobi - Gaborone born, family-taught - started a revolution in 2015 with his grandmother's recipes and a simple stall. What began as one man's dream is now Botswana's favorite fast-food story.
+            
+            Our secret? Real family flavors served at lightning speed. That first fiery sauce that won over Main Mall still stars in every meal today. When demand exploded, we grew - but never changed how we cook: onions chopped fresh, spices measured by heart, every burger grilled with pride.
+            
+            From our Broadhurst beginnings to three Gaborone hotspots and growing in Francistown, one thing stays true: fast food should taste like home. Not just any home - your home. Priced so you never have to miss that flavor.
+            
+            This isn't just food. It's your childhood memories served in every bite, your late-night cravings answered, your quick lunch made special. Botswana's flavor legacy - kept alive, one satisfied customer at a time.</p>
+          <p class="founder-quote">"We craft bold flavors fast - where every bite sparks joy and keeps you coming back."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- section about core values -->
+  <section class="core-values-section">
+    <div class="values-container">
+      <h2 class="values-heading">Our Core Values</h2>
+      <div class="values-grid">
+        <!-- Value 1 -->
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fas fa-heart"></i>
+          </div>
+          <h3>Quality & Authenticity</h3>
+          <p>We use only the freshest local ingredients and traditional recipes to deliver authentic modern flavors in every meal. Quality is never compromised.</p>
+        </div>
+        
+        <!-- Value 2 -->
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>Community Focus</h3>
+          <p>We're proud to be part of the Botswana community. We source locally, employ locally, and give back to the neighborhoods we serve.</p>
+        </div>
+        
+        <!-- Value 3 -->
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <h3>Innovation</h3>
+          <p>We constantly innovate - blending classic flavors with modern techniques to create exciting new taste experiences.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="social">
+        <h2>Find Us</h2>
+        <div class="icons">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="contact">
+        <h2>Contact Us</h2>  
+        <div class="phone">
+          <h3>Phone Number</h3>
+          <p style="font-size: 1.2rem;">+267 76668763</a></p>
+        </div>
+        <div class="email">
+          <h3>Email Us</h3>
+          <p>henry@gmail.com </p>
+        </div>
+        <address>
+          Private Bag 004 <br>
+          Gaborone
+        </address>
+      </div>
+      <div class="conditions">
+        <h2>Terms and Conditions</h2>
+        <a href="Terms.html">Terms and Conditions</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+    </div>
+    <hr style="color: white; width: 50%;margin: 0 auto;">
+     <h4 style="text-align: center; margin-top: 20px;">copyright@ChilliBite</h4>
+  </footer>
 </body>
 </html>
